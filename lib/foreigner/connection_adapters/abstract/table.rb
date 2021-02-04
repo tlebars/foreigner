@@ -4,7 +4,7 @@ module Foreigner
       extend ActiveSupport::Concern
 
       included do
-        alias_method_chain :references, :foreign_keys
+        alias_method :references, :foreign_keys
       end
 
       # Adds a new foreign key to the table. +to_table+ can be a single Symbol, or
